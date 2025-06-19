@@ -1,8 +1,7 @@
-// Configuration
-// const GROQ_API_KEY = process.env.groq_api_key; // Replace with your actual key or use environment variable
+// const GROQ_API_KEY = process.env.groq_api_key; // To fetch environment variable from .env
 // Configuration
 const GROQ_API_KEY ="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"//process.env.groq_api_key; // Replace with your actual key or use environment variable
-const MODEL_NAME = "gemma2-9b-it"; // or "llama3-70b-8192" for more power
+const MODEL_NAME = "gemma2-9b-it"; // 
 const MAX_TOKENS = 1000;
 const TEMPERATURE = 0.7;
 
@@ -41,16 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             let fullPrompt = prompt;
             
-            // NOTE: contextFileInput is not present in your provided HTML.
-            // If you intend to add a file input, you'll need to add it to your HTML.
-            // if (contextFileInput && contextFileInput.files.length > 0) {
-            //     const file = contextFileInput.files[0];
-            //     console.log("File detected:", file.name); // Log file detection
-            //     const fileContent = await readFileAsText(file);
-            //     console.log("File content read successfully."); // Log file content read
-            //     fullPrompt = `File context:\n\`\`\`${file.name.split('.').pop()}\n${fileContent}\n\`\`\`\nUser query: ${prompt}`;
-            // }
-            
+        
             console.log("User prompt:", fullPrompt); // Log the full prompt being sent
 
             // Add user message to history
@@ -128,7 +118,7 @@ async function fetchGroqResponse(messages) {
     }
 }
 
-// NOTE: This function is not used in your current HTML, but kept for completeness
+// This function is not used in HTML
 function readFileAsText(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
