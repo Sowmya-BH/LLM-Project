@@ -1,6 +1,6 @@
-// const GROQ_API_KEY = process.env.groq_api_key; // To fetch environment variable from .env
+const GROQ_API_KEY = process.env.groq_api_key; // To fetch environment variable from .env
 // Configuration
-const GROQ_API_KEY ="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"//process.env.groq_api_key; // Replace with your actual key or use environment variable
+const GROQ_API_KEY =""//process.env.groq_api_key; // Replace with your actual key or use environment variable
 const MODEL_NAME = "gemma2-9b-it"; // 
 const MAX_TOKENS = 1000;
 const TEMPERATURE = 0.7;
